@@ -1,0 +1,44 @@
+$font-style: oblique;
+%text-styling {
+    font: Helvetica, sans-serif;
+    color: aqua;
+}
+ 
+.ion_card_content {
+    @extend %text-styling;
+    font-size: 10px;
+}
+ 
+.ion_card_content1 {
+    @extend %text-styling;
+    font-size: 50px;
+}
+ 
+.title {
+    font-style: $font-style;
+    font-weight: 700;
+}
+ 
+.subtitle {
+    font-style: $font-style;
+}
+ 
+@mixin theme($theme: DarkGray) {
+    background: $theme;
+    box-shadow: 3px 3px 5px rgba($theme, .50);
+    color: #fff;
+    height: 50px;
+    width: 100px
+}
+ 
+.info {
+    @include theme;
+}
+ 
+.alert {
+    @include theme($theme: DarkRed);
+}
+ 
+.success {
+    @include theme($theme: DarkGreen);
+}

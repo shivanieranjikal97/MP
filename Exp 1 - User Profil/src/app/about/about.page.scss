@@ -1,0 +1,60 @@
+.scroll{
+
+  --ion-background-color: white;
+  background-color: white;
+
+  //To scroll down without scrollbar
+  //Use arrow down & arrow up keys
+
+  --offset-bottom: auto !important;
+  --overflow: hidden;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+      display: none;
+  }
+
+}
+
+.circle-pic{
+   
+    width:140px;
+    height:145px;
+    border-radius: 50%;
+    border:2px groove white;
+}
+
+#container {
+
+  
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-top: 1%;
+    background-color: rgb(215, 53, 80);
+    
+  }
+
+  ion-label{
+    background-color: rgb(202, 38, 65) ;
+    line-height: 30px;
+    color: white;
+  }
+
+  ion-progress-bar {
+    height: 10px;
+    border-radius: 15px;
+  }
+
+  p{
+    line-height: 28px;
+  }
+
+  ion-card-header{
+    height:40px;
+    background-color: rgb(215, 53, 80);
+  }
+
+  ion-card-title{
+    font-size:16px;
+  }

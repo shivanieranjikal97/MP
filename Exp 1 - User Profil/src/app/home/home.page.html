@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="color: rgb(217, 44, 73);">
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  
+
+  <div id="container">
+  &nbsp;<br>
+    <strong>Welcome to my <br>Profile!</strong>
+    <br>&nbsp;<br>
+
+
+    <ion-img src="https://cdn-icons-png.flaticon.com/128/6997/6997662.png"></ion-img>
+    <br>
+    <ion-button color="danger" [routerLink]="['/about']">View Profile</ion-button>
+    <br>&nbsp;<br>
+
+    <ion-button color="danger" (click)="_actionSheet()">Action Sheet</ion-button>
+    
+<br>&nbsp;
+
+
+  </div>
+
+ 
+
+</ion-content>

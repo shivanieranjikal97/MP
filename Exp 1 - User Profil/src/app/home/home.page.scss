@@ -1,0 +1,41 @@
+@use "../about2/about2.page.scss";
+
+.abc{
+  font-style: about2.$font-style;
+
+}
+
+.xyz{
+  @extend %text-styling;
+}
+
+
+#container {
+
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(217, 44, 73);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 52%;
+  transform: translateY(-50%);
+  background-color: rgb(250, 221, 225);
+  margin: auto;
+}
+
+#container strong {
+  font-size: 25px;
+  line-height: 35px
+}
+
+ion-img{
+  height: 180px;
+  width: 180px;
+  margin: auto;
+}
+
+ion-button{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
