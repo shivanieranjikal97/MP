@@ -1,0 +1,119 @@
+@import '../tab1/tab1.page.scss';
+
+ion-header {
+   @include header();
+
+}
+
+.scrol {
+   @include scrollb();
+
+   background-color: $primaryC;
+
+}
+
+ion-img {
+   margin-top: 5px;
+}
+
+.ii {
+   margin-top: 90px;
+   --ion-background-color: $primaryC;
+   background-color: $primaryC;
+   margin-left: 0px;
+   margin-right: 0px;
+   overflow: hidden;
+
+
+}
+
+.cc {
+   margin-top: 0px;
+   margin-left: 0px;
+   margin-right: 0px;
+   --ion-background-color: $primaryC;
+   background-color: $primaryC;
+   overflow: hidden;
+   height: 440px;
+
+}
+
+
+.pqr {
+   margin-top: -2px;
+   --ion-background-color: $greyBg;
+   background-color: $greyBg;
+   margin-left: -10px;
+   margin-right: 15px;
+   border-top-right-radius: 20px 20px;
+   border-top-left-radius: 0px 0px;
+   border-bottom-right-radius: 20px 20px;
+   border-bottom-left-radius: 0px 0px;
+   font-family: $myFont;
+   padding: 8px;
+   padding-top: 0px;
+   // height:295px;
+   transition: all 0.3s ease;
+
+}
+
+.address {
+   --ion-background-color: white;
+   background-color: white;
+   border-radius: 10px;
+}
+
+.in {
+   font-family: $myFont;
+   font-size: 13px;
+   color: $primaryC;
+   font-weight: 600;
+   padding-top: 10px;
+   padding-bottom: 2px;
+}
+
+.str {
+   margin-top: -327px;
+   --ion-background-color: $greyBg;
+   background-color: $greyBg;
+   margin-left: 280px;
+   // margin-right:15px;
+   border-top-right-radius: 0px 0px;
+   border-top-left-radius: 20px 20px;
+   border-bottom-right-radius: 0px 0px;
+   border-bottom-left-radius: 20px 20px;
+   font-family: $myFont;
+   padding: 8px;
+   padding-top: 0px;
+   height: 318px;
+   transition: all 0.3s ease;
+}
+
+#contact {
+
+   --background: rgb(224, 209, 209);
+   width: 60px;
+   height: 45px;
+}
+
+#map {
+
+   --background: rgb(224, 209, 209);
+   width: 60px;
+   height: 45px;
+   margin-left: 214px;
+   margin-top: -70px;
+}
+
+#map:focus~.pqr {
+
+   margin-left: -280px;
+   margin-right: 280px;
+}
+
+#map:focus~.str {
+
+   margin-left: 10px;
+   margin-right: 0px;
+
+}

@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="false" class="bg">
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-item style="color:white;font-size:19px;">
+          <ion-icon name="menu" color="light"></ion-icon>
+          &nbsp;&nbsp;Menu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-icon name="notifications" color="light"></ion-icon>
+          &nbsp;&nbsp;
+          <ion-avatar>
+            <img src="../assets/user.png" style="width:40px;height:40px;" />
+          </ion-avatar>
+        </ion-item>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+  <ion-card class="cd">
+    <ion-card class="c1" style="margin-top:10px;line-height:200%;height:2000px;">
+
+      <button
+        style="width:235px;text-align:left;margin-left:-5px;font-weight:600;font-size:16px;margin-top: 10px;margin-bottom:10px;">Edit
+        Company Details</button>
+      <br>
+      <form [formGroup]="updateUserFg" (ngSubmit)="onSubmit()">
+        Company Name:
+        <ion-input class="iheight" formControlName="name"></ion-input>
+        Category:
+        <ion-select class="drop" interface="popover" formControlName="category" placeholder="Select Category">
+          <ion-select-option value="Elite">Elite</ion-select-option>
+          <ion-select-option value="Super Dream">Super Dream</ion-select-option>
+          <ion-select-option value="Dream">Dream</ion-select-option>
+        </ion-select>
+        CTC:
+        <ion-input class="iheight" formControlName="ctc"></ion-input>
+        Role:
+        <ion-select class="drop" interface="popover" formControlName="role" placeholder="Select role">
+          <ion-select-option value="Software Developer">Software Developer</ion-select-option>
+          <ion-select-option value="Business Analyst">Business Analyst</ion-select-option>
+          <ion-select-option value="Data Engineer">Data Engineer</ion-select-option>
+        </ion-select>
+        Location:
+        <ion-select class="drop" interface="popover" formControlName="location" placeholder="Select location">
+          <ion-select-option value="Mumbai">Mumbai</ion-select-option>
+          <ion-select-option value="Pune">Pune</ion-select-option>
+          <ion-select-option value="Chennai">Chennai</ion-select-option>
+        </ion-select>
+        Date:
+        <ion-datetime style="width:230px;font-size:12px;" formControlName="date" size="cover"></ion-datetime>
+
+        <button style="margin-left:60px;" type="submit">Save</button>
+      </form>
+    </ion-card>
+
+  </ion-card>

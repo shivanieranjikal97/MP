@@ -1,0 +1,44 @@
+$headerC: rgb(51, 15, 51);
+$primaryC: rgb(11, 11, 30);
+$greyBg: rgba(255, 255, 255, 0.8);
+$myFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.outer1 {
+    font-size: 20px;
+    padding-left: 35px;
+    padding-top: 30px;
+    height: 90px;
+    padding-bottom: 20px;
+    font-family: $myFont;
+
+
+    .inner1 {
+        font-size: 13px;
+        margin-top: 7px;
+        color: rgb(203, 195, 195);
+        font-family: $myFont;
+    }
+}
+
+.mheight {
+    height: 45px;
+    font-style: $myFont;
+    color: $primaryC;
+    font-weight: 400;
+    border-bottom-style: groove;
+    border-width: 0.5px;
+
+}
+
+button {
+    margin-top: 10px;
+    width: 130px;
+    height: 40px;
+    margin-left: 15px;
+    background-color: $primaryC;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 5px;
+
+}

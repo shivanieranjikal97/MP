@@ -1,0 +1,169 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>
+            Student & Feedback Info
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <form [formGroup]="userForm" (ngSubmit)="submitData()">
+
+        <ion-title style="color: #4d71d7; margin-top: 15px;">Student Information</ion-title>
+
+        <ion-list>
+            <ion-item>
+                <ion-label position="floating">UCID</ion-label>
+                <ion-input [(ngModel)]="ucid" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Name</ion-label>
+                <ion-input [(ngModel)]="name" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Contact</ion-label>
+                <ion-input [(ngModel)]="contact" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Location</ion-label>
+                <ion-input [(ngModel)]="location" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+        </ion-list>
+
+        <!--
+        <ion-title style="color: #4d71d7; margin-top: 15px;">Feedback Form</ion-title>
+
+
+
+
+        <div id="expand">
+            <ul>
+                <li>
+                    <input type="checkbox" checked>
+                    <i></i>
+                    <h2>MPL</h2>
+                    <ion-card>
+                        <ion-list style="margin-top: 15px;">
+                            <ion-label style="margin-left: 20px;">Rate your understanding of MPL</ion-label>
+
+                            <ion-radio-group (ionChange)="initializeUnderstanding($event)" [(ngModel)]="understanding" [ngModelOptions]="{standalone: true}">
+                                <ion-item>
+                                    <ion-label>Very Good</ion-label>
+                                    <ion-radio slot="start" color="tertiary" value="Very Good"></ion-radio>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label>Average</ion-label>
+                                    <ion-radio slot="start" color="tertiary" value="Average"></ion-radio>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label>Poor</ion-label>
+                                    <ion-radio slot="start" color="tertiary" value="Poor"></ion-radio>
+                                </ion-item>
+                            </ion-radio-group>
+                        </ion-list>
+
+                        <ion-list style="margin-top: 10px;">
+                            <ion-item>
+                                <ion-label>Concentration in class</ion-label>
+                                <ion-select interface="popover" (ionChange)="initializeConcentration($event)" [(ngModel)]="concentration" [ngModelOptions]="{standalone: true}">
+                                    <ion-select-option value="above 80%">Above 80%</ion-select-option>
+                                    <ion-select-option value="around 50%">Around 50%</ion-select-option>
+                                    <ion-select-option value="below 30%">Below 30%</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                        </ion-list>
+                    </ion-card>
+                </li>
+
+                <li>
+                    <input type="checkbox" checked>
+                    <i></i>
+                    <h2>PA</h2>
+                    <ion-card>
+                        <ion-list style="margin-top: 15px;">
+                            <ion-label style="margin-left: 20px;">Rate your understanding of PA</ion-label>
+
+                            <ion-radio-group (ionChange)="initializeUnderstanding2($event)" [(ngModel)]="understanding2" [ngModelOptions]="{standalone: true}">
+                                <ion-item>
+                                    <ion-label>Very Good</ion-label>
+                                    <ion-radio slot="start" color="tertiary" value="Very Good"></ion-radio>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label>Average</ion-label>
+                                    <ion-radio slot="start" color="tertiary" value="Average"></ion-radio>
+                                </ion-item>
+
+                                <ion-item>
+                                    <ion-label>Poor</ion-label>
+                                    <ion-radio slot="start" color="tertiary" value="Poor"></ion-radio>
+                                </ion-item>
+                            </ion-radio-group>
+                        </ion-list>
+
+                        <ion-list style="margin-top: 10px;">
+                            <ion-item>
+                                <ion-label>Concentration in class</ion-label>
+                                <ion-select interface="popover" (ionChange)="initializeConcentration2($event)" [(ngModel)]="concentration2" [ngModelOptions]="{standalone: true}">
+                                    <ion-select-option value="above 80%">Above 80%</ion-select-option>
+                                    <ion-select-option value="around 50%">Around 50%</ion-select-option>
+                                    <ion-select-option value="below 30%">Below 30%</ion-select-option>
+                                </ion-select>
+                            </ion-item>
+                        </ion-list>
+                    </ion-card>
+
+
+            </ul>
+        </div>
+
+        -->
+        <ion-button (click)="submitData()" expand="block" style="margin-top: 20px;">SUBMIT</ion-button>
+    </form>
+
+
+    <form [formGroup]="userForm" (ngSubmit)="submitData()">
+
+        <ion-title style="color: #4d71d7; margin-top: 15px;">Student Information</ion-title>
+
+        <ion-list>
+            <ion-item>
+                <ion-label position="floating">UCID</ion-label>
+                <ion-input [(ngModel)]="ucid" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Name</ion-label>
+                <ion-input [(ngModel)]="name" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Contact</ion-label>
+                <ion-input [(ngModel)]="contact" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Location</ion-label>
+                <ion-input [(ngModel)]="location" [ngModelOptions]="{standalone: true}"></ion-input>
+            </ion-item>
+        </ion-list>
+
+        <ion-button (click)="submitData()" expand="block" style="margin-top: 20px;">SUBMIT</ion-button>
+    </form>
+
+</ion-content>

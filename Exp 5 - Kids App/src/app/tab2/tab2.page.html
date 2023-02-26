@@ -1,0 +1,316 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item>
+      <ion-thumbnail slot="start" style="width:45px;height:45px;">
+        <img alt="Silhouette of mountains" src="../assets/logo.png" />
+      </ion-thumbnail>
+      <ion-label
+        style="color:white;font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size: 20px;font-weight: bolder;">Fun
+        with Learning</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="cd1">
+
+    <ion-segment color="dark" value="dark">
+      <ion-segment-button value="dark" (click)="toggle()">
+        <ion-label style="color:rgb(210, 15, 47);font-weight:bold;">Practise</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="segment" (click)="toggleL()">
+        <ion-label style="color:rgb(210, 15, 47);font-weight:bold;">Leaderboard</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+
+
+
+    <h5 style="margin-left:20px;color:rgb(210, 15, 47);font-weight: bold;">Practise Set</h5>
+
+    <ion-card class="prac" *ngIf="pTab" style="background-color:orange;padding:0px;">
+      <ul>
+        <li (click)="toggleP1()" style="--ion-background-color: #f7fdb8;background-color: #f7fdb8;">
+          <div class="items" style="text-align:center;">
+            <ion-img src="../assets/abc.png" style="width:230px;height:90px;"></ion-img>
+            <br>
+            <label
+              style="text-align:center;color:rgb(210, 15, 47);font-size:large;font-weight: bold;font-family: 'Comic Sans MS', 'Comic Sans', cursive;">Learn
+              Alphabets</label>
+          </div>
+        </li>
+
+        <li (click)="toggleP2()" style="--ion-background-color: #f7fdb8;background-color: #f7fdb8;">
+          <div class="items" style="text-align:center;">
+            <ion-img src="../assets/123.png" style="width:230px;height:90px;"></ion-img>
+            <br>
+            <label
+              style="text-align:center;color:rgb(210, 15, 47);font-size:large;font-weight: bold;font-family: 'Comic Sans MS', 'Comic Sans', cursive;">Count
+              Numbers</label>
+          </div>
+        </li>
+
+      </ul>
+    </ion-card>
+
+    <ion-card class="prac1" *ngIf="p1Tab" style="border-radius: 10px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+
+      <ion-item style="--ion-background-color: orange;background-color: orange">
+
+        <ion-col size="1">
+          <ion-icon name="arrow-back-circle" (click)="toggle()"
+            style="width:30px;height:30px;padding-top: 15px;color:white;"></ion-icon>
+        </ion-col>
+
+        <ion-col size="11">
+          <p style="padding-left:20px;font-weight: bold;
+          font-family:'Comic Sans MS', 'Comic Sans', cursive;color:white;padding-top: 5px;font-size: 17px;">
+            Alphabet:<br></p>
+        </ion-col>
+
+      </ion-item>
+
+
+      <ion-progress-bar color="primary" value="{{progress1}}" style="height:10px;"></ion-progress-bar>
+      <label
+        style="color:rgb(13, 13, 118);font-size:12px;font-weight: bold;padding:10px;font-family:'Comic Sans MS', 'Comic Sans', cursive;">Points:
+        {{totalCor1*10}}</label>
+      <br><br>
+
+      <label
+        style="color:rgb(210, 15, 47);font-weight: bolder;padding:10px;font-family:'Comic Sans MS', 'Comic Sans', cursive;">
+        Q{{quiz1?.[curAlpha].id}}.&nbsp; {{quiz1?.[curAlpha].qs}}</label>
+      <br>
+      <ion-item style="font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size:14px;color: rgb(13, 13, 118);">
+        <ion-col class="opt" (click)="checkAns1(quiz1?.[curAlpha].option?.[0])">
+          {{quiz1?.[curAlpha].option?.[0]}}
+        </ion-col>
+        &nbsp;&nbsp;
+        <ion-col class="opt" (click)="checkAns1(quiz1?.[curAlpha].option?.[1])">
+          {{quiz1?.[curAlpha].option?.[1]}}
+        </ion-col>
+      </ion-item>
+
+      <ion-item style="font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size:14px;color: rgb(13, 13, 118);">
+        <ion-col class="opt" (click)="checkAns1(quiz1?.[curAlpha].option?.[2])">
+          {{quiz1?.[curAlpha].option?.[2]}}
+        </ion-col>
+        &nbsp;&nbsp;
+        <ion-col class="opt" (click)="checkAns1(quiz1?.[curAlpha].option?.[3])">
+          {{quiz1?.[curAlpha].option?.[3]}}
+        </ion-col>
+      </ion-item>
+
+      <ion-item
+        style="font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size:14px;color: rgb(13, 13, 118);--ion-background-color: orange;background-color: orange">
+        <ion-col size="3">
+          <ion-img src="../assets/previous.png" (click)="prev1()"></ion-img>
+        </ion-col>
+
+        <ion-col size="6.5" *ngIf="correct1[curAlpha]===false && wrong1[curAlpha]===false">
+
+        </ion-col>
+
+        <ion-col size="6.5" style="background-color:green; color:white;text-align: center;
+            border-radius: 5px;" *ngIf="correct1[curAlpha]===true">
+          Correct
+        </ion-col>
+
+        <ion-col size="6.5" style="background-color:rgb(189, 5, 5); color:white;text-align: center;
+            border-radius: 5px;" *ngIf="wrong1[curAlpha]===true">
+          Wrong
+        </ion-col>
+
+        <ion-col size="2.5">
+          <ion-img src="../assets/next.png" (click)="next1()"></ion-img>
+        </ion-col>
+      </ion-item>
+
+    </ion-card>
+
+    <ion-card *ngIf="finish1" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+      <ion-item style="--ion-background-color: orange;background-color: orange">
+
+        <ion-col size="1">
+          <ion-icon name="arrow-back-circle" (click)="toggle()"
+            style="width:30px;height:30px;padding-top: 15px;color:white;"></ion-icon>
+        </ion-col>
+
+        <ion-col size="11">
+          <p style="padding-left:20px;font-weight: bold;
+          font-family:'Comic Sans MS', 'Comic Sans', cursive;color:white;padding-top: 5px;font-size: 17px;">
+            Alphabet - Result<br></p>
+        </ion-col>
+
+      </ion-item>
+
+      <ion-img src="../assets/score.png" style="width:250px;height:120px;"></ion-img>
+      <br>
+      <div
+        style="font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size: 40px;color:rgb(210, 15, 47);text-align: center;">
+        {{totalCor1*10}}
+        <br>
+        Points
+      </div>
+
+    </ion-card>
+
+    <ion-card class="prac2" *ngIf="p2Tab" style="border-radius: 10px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+      <ion-item style="--ion-background-color: orange;background-color: orange">
+
+        <ion-col size="1">
+          <ion-icon name="arrow-back-circle" (click)="toggle()"
+            style="width:30px;height:30px;padding-top: 15px;color:white;"></ion-icon>
+        </ion-col>
+
+        <ion-col size="11">
+          <p style="padding-left:20px;font-weight: bold;
+          font-family:'Comic Sans MS', 'Comic Sans', cursive;color:white;padding-top: 5px;font-size: 17px;">
+            Count Numbers <br></p>
+        </ion-col>
+
+      </ion-item>
+
+      <ion-progress-bar color="primary" value="{{progress2}}" style="height:10px;"></ion-progress-bar>
+      <label
+        style="color:rgb(13, 13, 118);font-size:12px;font-weight: bold;padding:10px;font-family:'Comic Sans MS', 'Comic Sans', cursive;">Points:
+        {{totalCor2*10}}</label>
+      <br><br>
+
+      &nbsp;&nbsp;&nbsp;
+      <img src="{{quiz2?.[curNum].qs}}" style="width:220px;height:90px;">
+      <br>
+      <ion-item>
+        <ion-col class="opt" (click)="checkAns2(quiz2?.[curNum].option?.[0])">
+          {{quiz2?.[curNum].option?.[0]}}
+        </ion-col>
+        &nbsp;&nbsp;
+        <ion-col class="opt" (click)="checkAns2(quiz2?.[curNum].option?.[1])">
+          {{quiz2?.[curNum].option?.[1]}}
+        </ion-col>
+      </ion-item>
+
+      <ion-item>
+        <ion-col class="opt" (click)="checkAns2(quiz2?.[curNum].option?.[2])">
+          {{quiz2?.[curNum].option?.[2]}}
+        </ion-col>
+        &nbsp;&nbsp;
+        <ion-col class="opt" (click)="checkAns2(quiz2?.[curNum].option?.[3])">
+          {{quiz2?.[curNum].option?.[3]}}
+        </ion-col>
+      </ion-item>
+
+      <ion-item
+        style="font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size:14px;color: rgb(13, 13, 118);--ion-background-color: orange;background-color: orange">
+        <ion-col size="3">
+          <ion-img src="../assets/previous.png" (click)="prev2()"></ion-img>
+        </ion-col>
+
+        <ion-col size="6.5" *ngIf="correct2[curNum]===false && wrong2[curNum]===false">
+
+        </ion-col>
+
+        <ion-col size="6.5" style="background-color:green; color:white;text-align: center;
+            border-radius: 5px;" *ngIf="correct2[curNum]===true">
+          Correct
+        </ion-col>
+
+        <ion-col size="6.5" style="background-color:rgb(189, 5, 5); color:white;text-align: center;
+            border-radius: 5px;" *ngIf="wrong2[curNum]===true">
+          Wrong
+        </ion-col>
+
+        <ion-col size="2.5">
+          <ion-img src="../assets/next.png" (click)="next2()"></ion-img>
+        </ion-col>
+      </ion-item>
+
+    </ion-card>
+
+    <ion-card *ngIf="finish2" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+      <ion-item style="--ion-background-color: orange;background-color: orange">
+
+        <ion-col size="1">
+          <ion-icon name="arrow-back-circle" (click)="toggle()"
+            style="width:30px;height:30px;padding-top: 15px;color:white;"></ion-icon>
+        </ion-col>
+
+        <ion-col size="11">
+          <p style="padding-left:20px;font-weight: bold;
+          font-family:'Comic Sans MS', 'Comic Sans', cursive;color:white;padding-top: 5px;font-size: 17px;">
+            Count Numbers - Result<br></p>
+        </ion-col>
+
+      </ion-item>
+
+      <ion-img src="../assets/score.png" style="width:250px;height:120px;"></ion-img>
+      <br>
+      <div
+        style="font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size: 40px;color:rgb(210, 15, 47);text-align: center;">
+        {{totalCor2*10}}
+        <br>
+        Points
+      </div>
+
+    </ion-card>
+
+    <ion-card class="prac" *ngIf="lTab"
+      style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding-top: 10px;padding-bottom:10px;">
+
+      <ion-img src="../assets/leader.png" style="width:260px;height:100px;"></ion-img>
+
+      <ion-card class="lead">
+        <ion-item>
+          <ion-col size="2">
+            <ion-img src="../assets/abc.png"></ion-img>
+          </ion-col>
+
+          <ion-col size="8" class="in">
+            &nbsp;&nbsp;Alphabets
+          </ion-col>
+
+          <ion-col size="2" class="in">
+            {{totalCor1*10}}
+          </ion-col>
+        </ion-item>
+      </ion-card>
+
+      <ion-card class="lead">
+        <ion-item>
+          <ion-col size="2">
+            <ion-img src="../assets/123.png"></ion-img>
+          </ion-col>
+
+          <ion-col size="8" class="in">
+            &nbsp;&nbsp;Numbers
+          </ion-col>
+
+          <ion-col size="2" class="in">
+            {{totalCor2*10}}
+          </ion-col>
+        </ion-item>
+      </ion-card>
+
+
+      <hr style="border: 0;clear:both;display:block;width: 96%;background-color:rgb(210, 15, 47);height: 1px;">
+
+      <ion-card class="lead" style=" --ion-background-color: #FFCCE1;background-color:#FFCCE1;">
+        <ion-item>
+          <ion-col size="2">
+            <ion-img src="../assets/podium.png"></ion-img>
+          </ion-col>
+
+          <ion-col size="8" class="in">
+            &nbsp;&nbsp;Total Score
+          </ion-col>
+
+          <ion-col size="2" class="in">
+            {{totalCor1*10+totalCor2*10}}
+          </ion-col>
+        </ion-item>
+      </ion-card>
+
+    </ion-card>
+  </ion-card>
+</ion-content>

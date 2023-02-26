@@ -1,0 +1,158 @@
+<ion-content [fullscreen]="false" class="scrol">
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-item style="color:white;font-size:19px;">
+          Menu
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-icon name="notifications" color="light" (click)="setOpent2(true)"></ion-icon>
+          &nbsp;&nbsp;
+          <ion-avatar>
+            <img src="../assets/shivani.jpg" style="width:40px;height:40px;" />
+          </ion-avatar>
+        </ion-item>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+  <ion-card class="bg1">
+    <ion-card class="ab">
+      <ion-segment color="dark" value="dark">
+        <ion-segment-button value="dark" (click)="toggleC()">
+          <ion-label>Courses</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="segment" (click)="toggleD()">
+          <ion-label>Dashboard</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card>
+  </ion-card>
+
+
+
+  <ion-card class="cd" style="height:800px;" *ngIf="cTab">
+    <h5 style="padding-left:20px;color:rgb(51, 15, 51);font-weight: bold;padding-top: 5px;">Courses<br></h5>
+    <ul>
+      <li *ngFor="let i of [0,1,2,3,4,5,6,7]">
+        <img src="{{course?.[u].courses?.[i].icon}}" />
+        <div class="cname">
+          {{course?.[u].courses?.[i].name}}
+          <div class="cname1">
+            {{course?.[u].courses?.[i].code}}
+            <div class="plus">
+              <ion-fab-button color="danger" (click)="setOpenC(true,i)" *ngIf="arr[i]===true">
+                <ion-icon name="add"></ion-icon>
+              </ion-fab-button>
+
+              <ion-fab-button color="success" (click)="presentToast('bottom')" *ngIf="arr[i]===false">
+                <ion-icon name="checkmark-sharp"></ion-icon>
+              </ion-fab-button>
+
+
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    &nbsp;<br>
+    &nbsp;<br>
+    &nbsp;<br>
+
+  </ion-card>
+
+  <ion-card class="cd1" *ngIf="dTab">
+    <h5 style="padding-left:20px;color:rgb(51, 15, 51);font-weight: bold;padding-top: 5px;">Dashboard<br></h5>
+    <ul class="u2">
+      <li *ngFor="let i of list" class="l2">
+
+        <ion-item>
+
+          <ion-col size="3">
+            <ion-avatar>
+              <img src="{{i.icon}}" />
+            </ion-avatar>
+          </ion-col>
+
+          <ion-col size="8">
+            <div class="name">
+              {{i.name}}
+              <div class="name2">
+                {{i.code}}
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col size="1">
+            <ion-icon name="chevron-forward" expand="block"></ion-icon>
+          </ion-col>
+
+        </ion-item>
+      </li>
+
+    </ul>
+    &nbsp;<br>
+    &nbsp;<br>
+    &nbsp;<br>
+
+  </ion-card>
+
+
+</ion-content>
+
+<ion-modal [isOpen]="isModalOpenC"
+  style="height:190x;margin-top:440px;border-top-right-radius: 20px 20px;border-top-left-radius: 20px 20px;border-bottom-right-radius: 0px 0px;border-bottom-left-radius: 0px 0px;">
+  <ng-template>
+    <ion-header
+      style="border-top-right-radius: 20px 20px;border-top-left-radius: 20px 20px;border-bottom-right-radius: 0px 0px;border-bottom-left-radius: 0px 0px;">
+      <ion-toolbar>
+        <ion-title style="font-size:18px;">Enroll Me</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenC(false,10)" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: rgb(11, 11, 30);">
+
+      <ion-item style="padding:2px;--ion-background-color: rgb(11, 11, 30);">
+        <input style="border-radius:5px;height:42px;width:180px;" type="password" placeholder="Enter enrollment key...">
+        <button
+          style="width:135px;height:39px;margin-left: 15px;font-weight: 400;font-size: 16px;border-radius: 5px;background-color:white;"
+          (click)="add(j)" (click)="setOpenC(false,10)">
+          <ion-icon name="arrow-forward" color="medium" style="width:25px;height:25px;"></ion-icon>
+        </button>
+      </ion-item>
+
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal [isOpen]="isModalOpent2">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="font-size:18px;">Notifications</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpent2(false)" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: white;">
+
+      <iframe src="http://mca.spit.ac.in/index.php" id="iframe-id" scrolling="no"></iframe>
+
+      <ion-img src="../assets/notify.jpg" style="margin-top:280px;height:230px;">
+
+      </ion-img>
+    </ion-content>
+  </ng-template>
+</ion-modal>

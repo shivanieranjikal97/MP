@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item>
+      <ion-thumbnail slot="start" style="width:45px;height:45px;">
+        <img alt="Silhouette of mountains" src="../assets/logo.png" />
+      </ion-thumbnail>
+      <ion-label
+        style="color:white;font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size: 20px;font-weight: bolder;">Fun
+        with Learning</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="cd2">
+
+    <audio controls hidden>
+      <source src="" type="audio/mpeg">
+    </audio>
+
+    <h5 style="margin-left:20px;color:rgb(210, 15, 47);font-weight: bold;">My Profile</h5>
+    <ul>
+      <li style="--ion-background-color: #CCF1FF;background-color: #CCF1FF;">
+        <ion-item>
+          <ion-col size="3">
+            <ion-img src="../assets/baby.png" (mouseover)='playAudio(0)' style="width:40px;height:40px;"> </ion-img>
+          </ion-col>
+
+          <ion-col class="label" size="9">
+            Name:
+            <ion-input class="input" placeholder="What is your name?"></ion-input>
+
+          </ion-col>
+        </ion-item>
+      </li>
+
+      <li style="--ion-background-color: #FFCCE1;background-color: #FFCCE1;">
+        <ion-item>
+
+          <ion-col class="label" size="9">
+            Favourite Animal:
+            <ion-input class="input" placeholder="Who is your favourite animal?"></ion-input>
+          </ion-col>
+
+          <ion-col size="3">
+            <ion-img src="../assets/lion.png" (mouseover)='playAudio(1)' style="width:40px;height:40px;"> </ion-img>
+          </ion-col>
+        </ion-item>
+      </li>
+
+      <li style="--ion-background-color: #E0D7FF;background-color: #E0D7FF;">
+        <ion-item>
+          <ion-col size="3">
+            <ion-img src="../assets/color.png" (mouseover)='playAudio(2)' style="width:40px;height:40px;"> </ion-img>
+          </ion-col>
+
+          <ion-col class="label" size="9">
+            Favourite Colour:
+            <ion-input class="input" placeholder="Which is your favourite colour?"></ion-input>
+          </ion-col>
+        </ion-item>
+      </li>
+
+      <li style="--ion-background-color: #FAFFC7;background-color: #FAFFC7;">
+        <ion-item>
+
+          <ion-col class="label" size="9">
+            Favourite Food:
+            <ion-input class="input" placeholder="What is your favourite food?"></ion-input>
+          </ion-col>
+
+          <ion-col size="3">
+            <ion-img src="../assets/dish.png" (mouseover)='playAudio(3)' style="width:40px;height:40px;"> </ion-img>
+          </ion-col>
+        </ion-item>
+      </li>
+
+      <li style="--ion-background-color: #CCF1FF;background-color: #CCF1FF;">
+        <ion-item>
+          <ion-col size="3">
+            <ion-img src="../assets/cartoon.png" (mouseover)='playAudio(4)' style="width:40px;height:40px;"> </ion-img>
+          </ion-col>
+
+          <ion-col class="label" size="9">
+            Fav Cartoon:
+            <ion-input class="input" placeholder="Who is your favourite cartoon?"></ion-input>
+          </ion-col>
+        </ion-item>
+      </li>
+
+    </ul>
+  </ion-card>
+</ion-content>

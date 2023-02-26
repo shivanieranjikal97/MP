@@ -1,0 +1,114 @@
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<ion-content [fullscreen]="false" class="scrol">
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-item style="color:white;font-size:19px;">
+          Menu
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-icon name="notifications" color="light" (click)="setOpenFee(true)"></ion-icon>
+          &nbsp;&nbsp;
+          <ion-avatar>
+            <img src="../assets/shivani.jpg" style="width:40px;height:40px;" />
+          </ion-avatar>
+        </ion-item>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="light" (click)="reloadCurrentPage()" style="width: 40px;height: 40px;margin-right:10px;">
+      <ion-icon name="refresh"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card class="bg1">
+    <ion-card class="ab">
+      <ion-card class="abInside">
+        Feedback
+      </ion-card>
+    </ion-card>
+  </ion-card>
+
+  <ion-card class="cd">
+
+    <ion-card class="em">
+
+      <div class="wrapper">
+
+        <input type="radio" name="rate" id="star-1">
+        <input type="radio" name="rate" id="star-2">
+        <input type="radio" name="rate" id="star-3">
+        <input type="radio" name="rate" id="star-4">
+        <input type="radio" name="rate" id="star-5">
+
+        <div class="content">
+          <div class="outer">
+
+            <div class="emojis">
+              <li class="slideImg"><img src="../assets/e0.jpg"></li>
+              <li><img src="../assets/e1.jfif"></li>
+              <li><img src="../assets/e2.png"></li>
+              <li><img src="../assets/e3.jpg"></li>
+              <li><img src="../assets/e6.jpg"></li>
+              <li><img src="../assets/e5.png"></li>
+
+            </div>
+          </div>
+          <div class="stars">
+            <label for="star-1" class="star-1 fa fa-star"></label>&nbsp;
+            <label for="star-2" class="star-2 fa fa-star"></label>&nbsp;
+            <label for="star-3" class="star-3 fa fa-star"></label>&nbsp;
+            <label for="star-4" class="star-4 fa fa-star"></label>&nbsp;
+            <label for="star-5" class="star-5 fa fa-star"></label>
+
+          </div>
+        </div>
+        <div class="footer">
+          <span class="text"></span>
+          <span class="numb"></span>
+        </div>
+      </div>
+
+    </ion-card>
+
+    <ion-textarea placeholder="Do you have any thoughts you would like to share?" disabled="{{isDisabled}}">
+    </ion-textarea>
+
+    <button (click)="presentToast('bottom')">Submit</button>
+
+
+  </ion-card>
+
+
+</ion-content>
+
+<ion-modal [isOpen]="isModalOpenFee">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="font-size:18px;">Notifications</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenFee(false)" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: white;">
+
+      <iframe src="http://mca.spit.ac.in/index.php" id="iframe-id" scrolling="no"></iframe>
+
+      <ion-img src="../assets/notify.jpg" style="margin-top:280px;height:230px;">
+
+      </ion-img>
+    </ion-content>
+  </ng-template>
+</ion-modal>

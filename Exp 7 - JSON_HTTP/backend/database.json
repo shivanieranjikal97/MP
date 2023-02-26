@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "name": "BNP Paribas",
+      "category": "Elite",
+      "ctc": "7,00,000",
+      "role": "Application Development",
+      "location": "Mumbai",
+      "date": "2022-12-10T09:00:00+05:30",
+      "id": 1
+    }
+  ]
+}

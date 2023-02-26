@@ -1,0 +1,57 @@
+@import '../tab1/tab1.page.scss';
+
+ion-header {
+  @include header();
+
+}
+
+ion-content {
+  @include scrollb();
+
+  --background: white;
+  background-color: white;
+}
+
+
+.card {
+  width: 255px;
+  height: 139px;
+  margin-left: -28px;
+  perspective: 500px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+  transition: transform 0.8s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  color: rgb(145, 31, 50);
+  text-align: center;
+  font-size: 100px;
+  font-weight: bolder;
+  border-radius: 5px;
+  backface-visibility: hidden;
+  font-family: $myFont;
+}
+
+.back {
+  background: #03446A;
+  color: white;
+  transform: rotateY(180deg);
+}

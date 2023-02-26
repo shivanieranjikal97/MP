@@ -1,0 +1,90 @@
+<ion-app>
+
+  <ion-menu menuId="main-menu" contentId="main-content">
+    <ion-header style="--ion-background-color:  rgb(11, 11, 30); box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, 
+      rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;">
+      <ion-toolbar>
+
+        <ion-item style="color:white;font-size:19px;margin-left: 5px;height:110px;">
+          <ion-avatar style="padding-top: -20px;">
+            <ion-img src="../assets/shivani.jpg" style="width:65px;height:65px;border-style:ridge;"></ion-img>
+          </ion-avatar>
+
+          <div class="outer1">
+            Shivani Eranjikal
+            <div class="inner1">shivani.eranjikal@spit.ac.in</div>
+          </div>
+        </ion-item>
+
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-menu-toggle>
+        <ion-list>
+          <ion-item class="mheight" [routerLink]="['tabs/faculty']">
+            <ion-img src="../assets/teacher.png" style="width:35px;height:35px;"></ion-img>
+            &nbsp;&nbsp;&nbsp;&nbsp;<ion-label>Faculty</ion-label>
+          </ion-item>
+
+          <ion-item class="mheight" [routerLink]="['tabs/syllabus']">
+            <ion-img src="../assets/syllabus.png" style="width:35px;height:35px;"></ion-img>
+            &nbsp;&nbsp;&nbsp;&nbsp;<ion-label>Syllabus</ion-label>
+          </ion-item>
+
+          <ion-item class="mheight" [routerLink]="['tabs/exams']">
+            <ion-img src="../assets/exam.png" style="width:35px;height:35px;"></ion-img>
+            &nbsp;&nbsp;&nbsp;&nbsp;<ion-label>Exams</ion-label>
+          </ion-item>
+
+          <ion-item class="mheight" [routerLink]="['tabs/attendance']">
+            <ion-img src="../assets/att.png" style="width:35px;height:35px;"></ion-img>
+            &nbsp;&nbsp;&nbsp;&nbsp;<ion-label>Attendance</ion-label>
+          </ion-item>
+
+          <ion-item class="mheight" [routerLink]="['tabs/event']">
+            <ion-img src="../assets/event.png" style="width:35px;height:35px;"></ion-img>
+            &nbsp;&nbsp;&nbsp;&nbsp;<ion-label>Events</ion-label>
+          </ion-item>
+
+          <ion-item class="mheight" [routerLink]="['tabs/gallerys']">
+            <ion-img src="../assets/gallery.png" style="width:35px;height:35px;"></ion-img>
+            &nbsp;&nbsp;&nbsp;&nbsp;<ion-label>Gallery</ion-label>
+          </ion-item>
+
+          <ion-item class="mheight" [routerLink]="['tabs/placement']">
+            <ion-img src="../assets/offer.png" style="width:35px;height:35px;"></ion-img>
+            &nbsp;&nbsp;&nbsp;&nbsp; <ion-label>Placements</ion-label>
+          </ion-item>
+
+          <ion-item class="mheight" [routerLink]="['tabs/contact']">
+            <ion-img src="../assets/communicate.png" style="width:35px;height:35px;"></ion-img>
+            &nbsp;&nbsp;&nbsp;&nbsp; <ion-label>Contact Us</ion-label>
+          </ion-item>
+
+          <button [routerLink]="['/sign']">Log Out</button>
+
+          <!--      <ion-item class="mheight" [routerLink]="['tabs/design']">
+            <ion-img src="../assets/communicate.png" style="width:35px;height:35px;"></ion-img>
+            &nbsp;&nbsp;&nbsp;&nbsp; <ion-label>Design</ion-label>
+          </ion-item>
+          -->
+
+        </ion-list>
+      </ion-menu-toggle>
+
+    </ion-content>
+  </ion-menu>
+
+  <div id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

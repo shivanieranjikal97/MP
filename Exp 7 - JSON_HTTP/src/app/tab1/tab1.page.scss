@@ -1,0 +1,70 @@
+$headerC: rgb(109, 36, 36);
+$primaryC: rgb(109, 36, 36);
+$light: rgb(28, 28, 49);
+$greyBg: rgba(255, 255, 255, 0.8);
+$myFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+@mixin header {
+    --ion-background-color: $primaryC;
+    background-color: $primaryC;
+
+    ion-title {
+        color: white;
+
+    }
+}
+
+ion-header {
+    @include header();
+
+}
+
+
+
+@mixin scrollb {
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.bg {
+    --background: $primaryC;
+    background-color: $primaryC;
+    color: white;
+    --color: white;
+    text-align: center;
+    --padding-top: 80px;
+
+    @include scrollb();
+
+    .cd {
+        --background: white;
+        background: whitesmoke;
+        margin: 0;
+        left: 0;
+        right: 0;
+        border-top-right-radius: 20px 20px;
+        border-top-left-radius: 20px 20px;
+        border-bottom-right-radius: 0px 0px;
+        border-bottom-left-radius: 0px 0px;
+        margin-top: 30px;
+        height: 1000px;
+
+        button {
+            margin-top: 5px;
+            width: 150px;
+            height: 40px;
+            margin-left: 5px;
+            background-color: $primaryC;
+            color: white;
+            font-weight: 400;
+            font-size: 14px;
+            border-radius: 5px;
+            font-family: $myFont;
+        }
+    }
+}

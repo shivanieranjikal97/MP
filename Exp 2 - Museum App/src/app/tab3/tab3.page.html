@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color:whitesmoke">
+      <ion-icon name="menu"></ion-icon>&nbsp;&nbsp;Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item id="pTitle">Exhibition</ion-item>
+
+  <ion-item style="text-align:center;">
+    <ion-col (click)="toggleUp()" style="border-right:1px solid grey;">Upcoming</ion-col>
+    <ion-col (click)="toggleP()">Past</ion-col>
+  </ion-item>
+
+<div *ngIf="upTab">
+  <ion-list *ngFor="let i of [0,1,2,3,4]">
+
+      <ion-list-header style="color:brown">{{exhi?.[i].date}}</ion-list-header>
+
+      <ion-item>
+        <ion-img slot="start" src="{{exhi?.[i].pic}}"></ion-img>
+
+
+        <ion-label>
+          <h2>{{exhi?.[i].title}}</h2>
+          <p>{{exhi?.[i].description}}</p>
+          <p>{{exhi?.[i].venue}}</p>
+          <p><ion-icon name="location"></ion-icon>{{exhi?.[i].city}}</p>
+          <ion-button (click)="presentToast('bottom')">Send Enquiry</ion-button>
+        </ion-label>
+      </ion-item>
+
+
+    </ion-list>
+
+  </div>
+
+  <div *ngIf="pTab">
+
+    <ion-list *ngFor="let i of [5,6,7,8,9]">
+
+      <ion-list-header style="color:brown">{{exhi?.[i].date}}</ion-list-header>
+
+      <ion-item>
+        <ion-img slot="start" src="{{exhi?.[i].pic}}"></ion-img>
+
+
+        <ion-label>
+          <h2>{{exhi?.[i].title}}</h2>
+          <p>{{exhi?.[i].description}}</p>
+          <p>{{exhi?.[i].venue}}</p>
+          <p><ion-icon name="location"></ion-icon>{{exhi?.[i].city}}</p>
+        </ion-label>
+      </ion-item>
+
+
+    </ion-list>
+
+  </div>
+
+

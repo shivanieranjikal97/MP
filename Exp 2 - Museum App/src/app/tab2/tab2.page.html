@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color:whitesmoke">
+      <ion-icon name="menu"></ion-icon>&nbsp;&nbsp;Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-item id="pTitle">Kids' Art Collection</ion-item>
+
+<ion-content id="second">
+
+  <li *ngFor="let i of [4,5,6,7]">
+
+
+    <ion-item style="height: 260px;">
+      <img src="{{art?.[i].image}}" (click)="toggleTag()">
+
+    </ion-item>
+
+    <label style="font-size: 25px;">{{art?.[i].name}}</label>
+    <br><br>
+    <label style="font-size: 16px;color:brown;font-weight: bold;">{{art?.[i].year}}</label>
+    <br>
+    <label style="font-size: 16px;font-style: italic;">{{art?.[i].title}}</label>
+    <br>
+    <label style="font-size: 16px;font-style: italic;">By Emily Rose, Age 12</label>
+    <br>
+    <label style="font-size: 16px;font-style: italic;">
+      <ion-icon name="location"></ion-icon>Bridgerton
+    </label>
+    <br>&nbsp;
+
+    <ion-item (click)="toggleProv()" style="width:90%;margin:auto;">
+      <ion-label>
+        Provenance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <ion-icon name="add"></ion-icon>
+      </ion-label>
+    </ion-item>
+
+    <ion-card-content *ngIf="prov">{{art?.[i].provenance}}
+    </ion-card-content>
+    <br>
+    <hr style="border-top: 1px solid rgba(0, 0, 0, 0.3);" />
+
+
+
+  </li>
+
+
+</ion-content>

@@ -1,0 +1,58 @@
+@import '../tab1/tab1.page.scss';
+
+ion-header {
+  @include header();
+
+}
+
+ion-content {
+  @include scrollb();
+
+  --background: $primaryC;
+  background-color: $primaryC;
+}
+
+.cd2 {
+
+  @include bottomBg();
+
+  ul {
+    li {
+
+      --ion-background-color: yellow;
+      background-color: yellow;
+      list-style-type: none;
+      width: 245px;
+      height: 80px;
+      margin: auto;
+      --border-radius: 10px;
+      border-radius: 10px;
+      margin-left: -25px;
+      margin-bottom: 20px;
+      padding: 3px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      color: rgb(210, 15, 47);
+      font-weight: bold;
+      border-style: groove;
+
+
+
+    }
+  }
+
+}
+
+.input {
+  color: rgb(25, 25, 114);
+  font-family: $myFont;
+  font-weight: 600;
+  font-size: small;
+}
+
+.label {
+  color: rgb(210, 15, 47);
+  font-family: $myFont;
+  font-weight: bold;
+}

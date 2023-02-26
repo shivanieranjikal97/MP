@@ -1,0 +1,211 @@
+$headerC: rgb(51, 15, 51);
+$primaryC: rgb(11, 11, 30);
+$light: rgb(28, 28, 49);
+$greyBg: rgba(255, 255, 255, 0.8);
+$myFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+@mixin header {
+    --ion-background-color: $primaryC;
+    background-color: $primaryC;
+
+    ion-title {
+        color: white;
+
+    }
+}
+
+@mixin scrollb {
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.scrol {
+    @include scrollb();
+
+    background-color: $primaryC;
+}
+
+@mixin topBg {
+    top: 70px;
+    height: 60px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+
+    .ab {
+
+        margin-top: 0px;
+        height: 60px;
+        --ion-background-color: $primaryC;
+        background-color: $primaryC;
+        margin-left: 0px;
+        margin-right: 0px;
+        border-top-right-radius: 0px 0px;
+        border-top-left-radius: 0px 0px;
+        border-bottom-right-radius: 0px 0px;
+        border-bottom-left-radius: 50px 50px;
+        font-family: $myFont;
+
+        .abInside {
+            --ion-background-color: $light;
+            background-color: $light;
+            padding: 8px;
+            border-radius: 5px;
+            width: 70%;
+            margin: auto;
+            margin-top: 3px;
+            color: $greyBg;
+            font-size: 17px;
+            font-weight: 400;
+
+        }
+    }
+}
+
+@mixin bottomBg() {
+    top: 60px;
+    height: 600px;
+    --ion-background-color: white;
+    background-color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-top-right-radius: 50px 50px;
+    border-top-left-radius: 0px 0px;
+    border-bottom-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    font-family: $myFont;
+}
+
+.bgHome {
+    top: 60px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+
+
+
+    .bg1 {
+
+        height: 230px;
+        margin-top: -10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        border-radius: 0px;
+        --ion-background-color: $primaryC;
+        background-color: $primaryC;
+        border-top-right-radius: 0px 0px;
+        border-top-left-radius: 0px 0px;
+        border-bottom-right-radius: 0px 0px;
+        border-bottom-left-radius: 50px 50px;
+        text-align: center;
+
+        .ab {
+            color: whitesmoke;
+            --color: whitesmoke;
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+.mheight {
+    height: 60px;
+    font-style: $myFont;
+    color: $primaryC;
+    font-weight: 600;
+}
+
+ion-header {
+    @include header();
+
+}
+
+.cdHome {
+    top: 40px;
+    //  height: 600px;
+    --ion-background-color: white;
+    background-color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+    --ion-background-color: $primaryC;
+    background-color: $primaryC;
+    border-radius: none;
+
+    .cd {
+        margin-top: 0px;
+        //   height: 600px;
+        --ion-background-color: white;
+        background-color: white;
+        margin-left: 0px;
+        margin-right: 0px;
+        border-top-right-radius: 50px 50px;
+        border-top-left-radius: 0px 0px;
+        border-bottom-right-radius: 0px 0px;
+        border-bottom-left-radius: 0px 0px;
+        font-family: $myFont;
+        padding-top: 10px;
+
+
+        ion-item {
+            background-color: white;
+            width: 90%;
+            margin: auto;
+            margin-top: 18px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            color: $headerC;
+            box-shadow: 5px 10px 18px #888888;
+
+            ul {
+                padding-left: 10px;
+
+                li {
+                    margin-bottom: 5px;
+                    font-size: 15px;
+                }
+            }
+
+            ion-img {
+                width: 40px;
+                height: 40px;
+            }
+
+
+            ion-button {
+                border-radius: 0px;
+                --background: $primaryC;
+                background-color: $primaryC;
+
+            }
+        }
+
+        .list {
+            width: 90%;
+
+        }
+
+        ion-card-content {
+            background-color: white;
+        }
+
+        strong {
+            text-align: left;
+        }
+
+    }
+}
+
+
+#iframe-id {
+    position: absolute;
+    top: -240px;
+    width: 100%;
+    height: 70vh;
+    zoom: 1.7;
+}

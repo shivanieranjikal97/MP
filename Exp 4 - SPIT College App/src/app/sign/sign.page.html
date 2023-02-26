@@ -1,0 +1,97 @@
+<ion-content [fullscreen]="false" class="scrol">
+
+
+  <ion-card class="bg2">
+    <ion-card class="ab">
+      <ion-img src="../assets/homePic.png"></ion-img>
+    </ion-card>
+  </ion-card>
+
+  <ion-card class="bg3">
+    <ion-card class="cd2" *ngIf="logTab">
+
+      <h5 style="text-align: center;color:whitesmoke;">Login to your account!</h5>
+
+      <div class="login">
+
+        <ion-item>
+          <ion-col size="1.5">
+            <ion-icon name="person" color="light"></ion-icon>
+          </ion-col>
+
+          <ion-col size="10.5">
+            <input placeholder="Enter UCID as below" [(ngModel)]="ucid">
+          </ion-col>
+          
+        </ion-item>
+        <label style="font-size:x-small;color:whitesmoke;padding-left:7px;">'MC01' for MCA, 'IT01' for IT, 'EE01' for EXTC, 'CO01' for CS</label>
+
+        <ion-item>
+          <ion-col size="1.5">
+            <ion-icon name="key" color="light"></ion-icon>
+          </ion-col>
+
+          <ion-col size="10.5">
+            <input type="password" placeholder=" Password">
+          </ion-col>
+        </ion-item>
+
+      </div>
+      <button (click)="local()" [routerLink]="['/tabs/tab1']">Log In</button><br><br>
+
+      <div class="labels">
+        <label><u>Forgot Password ?</u></label>
+        <br>
+        <label>New to SPIT ? <u><b><a (click)="toggleSign()">Sign Up</a></b></u></label>
+      </div>
+    </ion-card>
+
+    <ion-card class="cd3" *ngIf="signTab">
+
+      <h5 style="text-align: center;color:whitesmoke;">Sign Up!</h5>
+
+      <div class="login">
+
+        <ion-item>
+          <ion-col size="12">
+            <input placeholder=" Enter your UCID">
+          </ion-col>
+        </ion-item>
+
+        <ion-item>
+          <ion-col size="6">
+            <input placeholder=" First name">
+          </ion-col>
+
+          <ion-col size="6">
+            <input placeholder=" Last name">
+          </ion-col>
+        </ion-item>
+
+        <ion-item>
+          <ion-col size="6">
+            <input type="password" placeholder=" Create password">
+          </ion-col>
+
+          <ion-col size="6">
+            <input type="password" placeholder=" Confirm password">
+          </ion-col>
+        </ion-item>
+
+
+
+
+      </div>
+      <button (click)="presentToast('bottom')" (click)="toggleLog()">Create Account</button><br><br>
+
+      <div class="labels">
+
+        <label>Already have an account ? <u><b><a (click)="toggleLog()">LogIn</a></b></u></label>
+      </div>
+    </ion-card>
+
+
+
+  </ion-card>
+
+</ion-content>

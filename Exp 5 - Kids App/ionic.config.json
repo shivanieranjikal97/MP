@@ -1,0 +1,8 @@
+{
+  "name": "kidsApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

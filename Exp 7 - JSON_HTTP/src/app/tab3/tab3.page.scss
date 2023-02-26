@@ -1,0 +1,119 @@
+@import '../tab1/tab1.page.scss';
+
+.scrol {
+    @include scrollb();
+}
+
+@mixin cardDesign {
+    height: 870px;
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 15px;
+    color: $primaryC;
+    font-weight: 600;
+    font-family: $myFont;
+}
+
+.bg {
+    --background: $primaryC;
+    background-color: $primaryC;
+    color: white;
+    --color: white;
+    text-align: center;
+    --padding-top: 80px;
+
+    @include scrollb();
+
+    .cd {
+        --ion-background-color: $greyBg;
+        background-color: $greyBg;
+        margin: 0;
+        left: 0;
+        right: 0;
+        border-top-right-radius: 20px 20px;
+        border-top-left-radius: 20px 20px;
+        border-bottom-right-radius: 0px 0px;
+        border-bottom-left-radius: 0px 0px;
+        margin-top: 1px;
+        height: 940px;
+
+
+        .ionc {
+            text-align: center;
+            font-family: $myFont;
+            font-size: 13px;
+            --ion-background-color: rgba(227, 219, 219, 0.8);
+            background-color: rgba(227, 219, 219, 0.8);
+            margin-top: 10px;
+
+
+
+            ion-col {
+                left: 0;
+                right: 0;
+                width: 100px;
+                margin: 0px;
+                font-weight: 600;
+                color: rgb(109, 36, 36);
+            }
+        }
+
+
+        .c1 {
+            @include cardDesign();
+
+            --ion-background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+
+            ion-input {
+                border-style: groove;
+                width: 228px;
+                margin-bottom: 15px;
+                margin-top: 5px;
+                border-width: 1px;
+                border-radius: 3px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                border-color: $greyBg;
+                color: grey;
+                font-weight: 400;
+                background-color: $greyBg;
+
+            }
+
+            .iheight {
+                height: 30px;
+                margin-top: 2px;
+                margin-bottom: 5px;
+            }
+
+
+            button {
+                margin-top: 5px;
+                width: 100px;
+                height: 40px;
+                margin-left: 5px;
+                background-color: $primaryC;
+                color: white;
+                font-weight: 400;
+                font-size: 14px;
+                border-radius: 5px;
+                font-family: $myFont;
+            }
+        }
+    }
+}
+
+.drop {
+    border-style: groove;
+    width: 228px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-width: 1px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-color: $greyBg;
+    color: grey;
+    font-weight: 400;
+    background-color: $greyBg;
+
+}

@@ -1,0 +1,71 @@
+@import '../tab1/tab1.page.scss';
+
+ion-header {
+    @include header();
+
+}
+
+.scrol {
+    @include scrollb();
+
+    background-color: $primaryC;
+}
+
+.bg1 {
+    @include topBg();
+
+}
+
+
+.cd {
+    @include bottomBg();
+
+    h5{
+        .sm{
+            font-size:14px;
+        }
+    }
+
+    li {
+        --ion-background-color: white;
+        background-color: white;
+        list-style-type: none;
+        width: 90%;
+        margin: auto;
+        --border-radius: 10px;
+        border-radius: 10px;
+
+
+        ion-item {
+            margin-bottom: 20px;
+            --border-radius: 10px;
+            border-radius: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            box-shadow: 5px 10px 18px #888888;
+            color:$primaryC;
+            font-family: $myFont;
+            font-weight: 600;
+
+            ion-avatar {
+                width: 50px;
+                height: 50px;
+            }
+
+            .name {
+                font-size: 13px;
+                font-family: $myFont;
+                font-weight: 600;
+
+                .name2 {
+                    font-weight: bold;
+                    color: $headerC;
+                    font-size: 15px;
+                    font-family: $myFont;
+                }
+            }
+
+        }
+
+    }
+}

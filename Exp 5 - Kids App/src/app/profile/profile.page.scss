@@ -1,0 +1,35 @@
+@import '../tab1/tab1.page.scss';
+
+ion-header {
+    @include header();
+
+}
+
+ion-content {
+    @include scrollb();
+
+
+
+    font-family: $myFont;
+    color: $primaryC;
+    --color: $primaryC;
+}
+
+.line {
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 55px;
+    color: rgb(199, 130, 1);
+    font-weight: bold;
+    font-size: 20px;
+}

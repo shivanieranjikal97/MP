@@ -1,0 +1,58 @@
+@import 'src/app/tab1/tab1.page.scss';
+
+$primaryC:rgb(138, 116, 49);
+$lightPrimary:rgb(185, 163, 95);
+
+@mixin pageTitle {
+    --background:$lightPrimary;
+    background-color: $lightPrimary;
+    font-size: 20px;
+    font-family: 'GT Super Text Web', Serif;
+    color:white;
+}
+
+#pTitle{
+    @include pageTitle();
+}
+
+ion-header {
+    --ion-background-color: $headerC;
+}
+
+#second {
+    @include scroll();
+    --ion-background-color: white;
+    background-color: white;
+    font-family: $myFont;
+    --color:$primaryC;
+    color:$primaryC;
+   
+
+    li {
+        list-style-type: none;
+
+        ion-item {
+            --background: $lightPrimary;
+            background-color: $lightPrimary;
+
+            img {
+                width: 95%;
+                height: 80%;
+                margin: auto;
+
+            }
+
+            ion-label{
+                font-family:$myFont;
+                font-size: 18px;
+            }
+
+        }
+
+        label {
+            padding-left: 10px;
+        }
+    }
+
+
+}

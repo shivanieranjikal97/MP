@@ -1,0 +1,28 @@
+$headerC: rgb(51, 15, 51);
+$primaryC: rgb(61, 14, 61);
+$greyBg: rgba(255, 255, 255, 0.8);
+$myFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.outer1 {
+    font-size: 20px;
+    padding-left: 35px;
+    padding-top: 30px;
+    height: 90px;
+    padding-bottom: 20px;
+    font-family: $myFont;
+
+
+    .inner1 {
+        font-size: 13px;
+        margin-top: 7px;
+        color: rgb(203, 195, 195);
+        font-family: $myFont;
+    }
+}
+
+.mheight {
+    height: 60px;
+    font-style: $myFont;
+    color: $primaryC;
+    font-weight: 600;
+}

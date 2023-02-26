@@ -1,0 +1,18 @@
+@import '../tab1/tab1.page.scss';
+
+ion-img {
+    width: 35px;
+    height: 35px;
+}
+
+ion-label {
+    color: rgb(210, 15, 47);
+    font-size: 12px;
+    font-family: $myFont;
+    font-weight: 600;
+}
+
+ion-tab-bar{
+    --background:$primaryC;
+    background-color:$primaryC;
+}

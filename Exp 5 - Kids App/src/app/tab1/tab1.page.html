@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item>
+      <ion-thumbnail slot="start" style="width:45px;height:45px;">
+        <img alt="Silhouette of mountains" src="../assets/logo.png" />
+      </ion-thumbnail>
+      <ion-label
+        style="color:white;font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size: 20px;font-weight: bolder;">Fun
+        with Learning</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="cd">
+
+    <h5 style="margin-left:20px;color:rgb(210, 15, 47);font-weight:bolder;">Learn, Play & Have Fun !</h5>
+    <ul>
+      <li routerLink="/tabs/alpha" style="--ion-background-color: #CCF1FF;background-color: #CCF1FF">
+        <div class="items">
+          <ion-img src="../assets/abc.png"></ion-img>
+
+          <div class="box"> Learn <br>Alphabets</div>
+        </div>
+      </li>
+
+      <li routerLink="/tabs/video" style="--ion-background-color: #FFCCE1;background-color: #FFCCE1">
+        <div class="items">
+          <ion-img src="../assets/music.png"></ion-img>
+
+          <div class="box"> Nursery <br>Rhymes</div>
+        </div>
+      </li>
+
+      <li routerLink="/tabs/number" style="--ion-background-color: #FAFFC7;background-color: #FAFFC7">
+        <div class="items">
+          <ion-img src="../assets/123.png"></ion-img>
+          <div class="box"> Count <br>Numbers</div>
+        </div>
+      </li>
+
+      <li routerLink="/tabs/story" style="--ion-background-color: #E0D7FF;background-color: #E0D7FF">
+        <div class="items">
+          <ion-img src="../assets/story.png"></ion-img>
+          <div class="box"> Bedtime <br>Stories</div>
+        </div>
+      </li>
+    </ul>
+  </ion-card>
+</ion-content>

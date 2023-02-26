@@ -1,0 +1,205 @@
+<ion-content [fullscreen]="false" class="scrol">
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-item style="color:white;font-size:19px;">
+          Menu
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-icon name="notifications" color="light" (click)="setOpenCon(true)"></ion-icon>
+          &nbsp;&nbsp;
+          <ion-avatar>
+            <img src="../assets/shivani.jpg" style="width:40px;height:40px;" />
+          </ion-avatar>
+        </ion-item>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="light" style="width:40px;height:40px;">
+      <ion-icon name="add-outline"></ion-icon>
+
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="light" (click)="setOpenF(true)">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="setOpenL(true)">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="setOpenT(true)">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+
+
+  <ion-card class="ii">
+
+    <ion-card class="cc">
+
+      <ion-button id="contact">
+        <ion-img src="../assets/contact.png" style="width:35px;height:35px;"></ion-img>
+      </ion-button>
+      <ion-button id="map">
+        <ion-img src="../assets/map.png" style="width:40px;height:40px;margin-top:-2px;margin-left: 2px;"></ion-img>
+      </ion-button>
+
+      <ion-card class="pqr">
+
+
+        <h5 style="padding-left:20px;color:rgb(51, 15, 51);font-weight: bold;">Contact Us<br></h5>
+
+        <ion-card class="address">
+          <ion-item class="in">
+            <ion-col size="2">
+              <ion-img src="../assets/call.png" style="width:25px;height:25px;"></ion-img>
+            </ion-col>
+            <ion-col size="10">
+              022 2670 7440
+            </ion-col>
+          </ion-item>
+
+          <ion-item class="in">
+            <ion-col size="2">
+              <ion-img src="../assets/gmail.png" style="width:25px;height:25px;"></ion-img>
+            </ion-col>
+            <ion-col size="10">
+              mca@spit.ac.in
+            </ion-col>
+          </ion-item>
+
+          <ion-item class="in">
+            <ion-col size="2">
+              <ion-img src="../assets/location.png" style="width:30px;height:30px;margin-top:-40px;"></ion-img>
+            </ion-col>
+            <ion-col size="10">
+              <b> Sardar Patel Institute of Technology</b><br>
+              <div style="margin-left: -30px;font-size: 12px;margin-top:15px;padding-bottom: 10px;"> Campus, Old D N
+                Nagar, Munshi Nagar, Andheri West, Mumbai, Maharashtra 400058.</div>
+            </ion-col>
+          </ion-item>
+        </ion-card>
+
+      </ion-card>
+
+
+      <ion-card class="str">
+
+
+        <h5 style="padding-left:20px;color:rgb(51, 15, 51);font-weight: bold;">Reach Us<br></h5>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.6467429644213!2d72.83582571871302!3d19.123147176715126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9d90e067ba9%3A0x16268e5d6bca2e6a!2sBharatiya%20Vidya%20Bhavan&#39;s%20Sardar%20Patel%20Institute%20of%20Technology%20(SPIT)!5e0!3m2!1sen!2sin!4v1664939316419!5m2!1sen!2sin"
+          width="245px" height="250px" style="border:0;padding-left: 10px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </ion-card>
+    </ion-card>
+  </ion-card>
+
+</ion-content>
+
+<ion-modal [isOpen]="isModalOpenF">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="font-size:18px;">Facebook Page</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenF(false)" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: white;">
+
+      <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fspitmca%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+        width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal [isOpen]="isModalOpenL">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="font-size:18px;">LinkedIn Page</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenL(false)" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: white;">
+
+      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6980084997617512449" height="771" width="504"
+        frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal [isOpen]="isModalOpenT">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="font-size:18px;">Twitter Page</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenT(false)" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: white;">
+
+      <blockquote class="twitter-tweet">
+        <p lang="qme" dir="ltr"><a href="https://twitter.com/hashtag/SPIT?src=hash&amp;ref_src=twsrc%5Etfw">#SPIT</a> <a
+            href="https://t.co/7UdtrVcMsm">pic.twitter.com/7UdtrVcMsm</a></p>&mdash; Sardar Patel Institute of
+        Technology - Official (@bvbspit) <a
+          href="https://twitter.com/bvbspit/status/1574319787408490496?ref_src=twsrc%5Etfw">September 26, 2022</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal [isOpen]="isModalOpenCon">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="font-size:18px;">Notifications</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenCon(false)" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: white;">
+
+      <iframe src="http://mca.spit.ac.in/index.php" id="iframe-id" scrolling="no"></iframe>
+
+      <ion-img src="../assets/notify.jpg" style="margin-top:280px;height:230px;">
+
+      </ion-img>
+    </ion-content>
+  </ng-template>
+</ion-modal>

@@ -1,0 +1,68 @@
+@import 'src/app/tab2/tab2.page.scss';
+@import 'src/app/tab1/tab1.page.scss';
+
+ion-header {
+    --ion-background-color: $headerC;
+}
+
+#first {
+    @include scroll();
+    --ion-background-color: $lightPrimary;
+    background-color: $lightPrimary;
+    font-family: $myFont;
+    --color: rgb(239, 203, 135);
+    text-align: center;
+    font-size: 27px;
+    --padding-top: 15px;
+
+    li {
+        list-style-type: none;
+    }
+
+    ion-card {
+        --background: white;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 1px;
+        border-radius: 0;
+        font-family: $myFont;
+
+        img {
+            width: 90%;
+            height: 95%;
+        }
+
+        ion-card-subtitle {
+            --color: brown;
+            font-weight: bold;
+        }
+
+        ion-card-content {
+            --background: $lightPrimary;
+            font-family: $myFont;
+
+            ion-item {
+                -extend :ion-card-content;
+                background-color: $lightPrimary;
+             
+
+                ion-label {
+                    font-family: $myFont;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+#back {
+    --background: black;
+    --box-shadow: none;
+}
+
+strong {
+    font-size: 20px;
+    font-family: $myFont;
+    color: whitesmoke;
+}

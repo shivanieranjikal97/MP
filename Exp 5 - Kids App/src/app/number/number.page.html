@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item>
+      <ion-thumbnail slot="start" style="width:45px;height:45px;">
+        <img alt="Silhouette of mountains" src="../assets/logo.png" />
+      </ion-thumbnail>
+      <ion-label
+        style="color:white;font-family:'Comic Sans MS', 'Comic Sans', cursive;font-size: 20px;font-weight: bolder;">
+        Numbers</ion-label>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ul>
+    <li *ngFor="let i of [0,1,2,3,4]" style="list-style-type: none;padding-bottom: 10px;">
+      <div class="card">
+        <div class="content">
+          <div class="front" style="background-image: url('{{number?.[i].bg}}'); background-size: cover;">
+            {{number?.[i].num}}
+
+            <small style="color:green;font-size:50px;">{{number?.[i].word}}</small>
+          </div>
+          <div class="back" (mouseover)='playAudio(i)'
+            style="background-image: url('{{number?.[i].image}}'); background-size: cover;">
+            <audio controls hidden>
+              <source src="{{number?.[i].audio}}" type="audio/mpeg">
+            </audio>
+
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+</ion-content>

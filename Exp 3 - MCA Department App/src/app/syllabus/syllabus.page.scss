@@ -1,0 +1,21 @@
+@import '../tab1/tab1.page.scss';
+
+ion-header {
+    @include header();
+ 
+ }
+
+ .scrol{
+    @include scrollb();
+
+    background-color: $primaryC;
+ }
+ 
+ .bg {
+    --background: $primaryC;
+    background-color: $primaryC;
+    color: white;
+    --color: white;
+    text-align: center;
+    --padding-top: 80px;
+ }

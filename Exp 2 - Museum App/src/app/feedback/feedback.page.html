@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="color:whitesmoke">
+      <ion-icon name="menu"></ion-icon>&nbsp;&nbsp;Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-item id="pTitle">Feedback</ion-item>
+
+  <ion-card>
+   
+    <p>  How is your experience with this app?</p>
+   
+    <div class="ratings">
+      <img src="https://i.imgur.com/TezGH8X.png">
+      <img src="https://i.imgur.com/P1bKktc.png">
+
+      <img src="https://i.imgur.com/LzDqrhA.png">
+
+      <img src="https://i.imgur.com/OkdWjCv.png">
+
+      <img src="https://i.imgur.com/7RHNQPw.png">
+      
+
+    </div>
+
+    
+     <p> Do you have any thoughts you would like to share?</p>
+   
+      <ion-textarea maxlength="200" [(ngModel)]="input"></ion-textarea>
+
+
+      <div id="container">
+        &nbsp;<br>
+        <ion-button (click)="presentToast('bottom')">
+          Send
+        </ion-button>
+
+      </div>
+
+    
+ 
+    
+  </ion-card>
+
+
+
+
+
+</ion-content>

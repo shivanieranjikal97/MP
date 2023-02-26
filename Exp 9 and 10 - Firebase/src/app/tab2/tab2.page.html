@@ -1,0 +1,63 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      View Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let data of users">
+
+    <ion-item>
+      <ion-label>UCID: {{data.ucid}}</ion-label>  
+      <ion-button (click)="updateData(data.ucid, data)">
+
+      </ion-button>  
+    </ion-item>
+
+    <ion-item>
+      <ion-label> Name: <span>{{data.name}}</span></ion-label>     
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Contact: {{data.contact}}</ion-label>    
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label >Email: {{data.email}}</ion-label>      
+    </ion-item>
+
+    <ion-item>
+      <ion-label >Location: {{data.location}}</ion-label>      
+    </ion-item>
+<!--
+    <ion-item>
+      <ion-label style="display:contents;">MP Understanding: {{data.understanding}}</ion-label>  
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="display:contents;">MP Concentration: {{data.concentration}}</ion-label>      
+    </ion-item>
+
+   
+  
+    <ion-item>
+      <ion-label style="display:contents;">PA Understanding: {{data.understanding2}}</ion-label>     
+    </ion-item>
+
+    <ion-item>
+      <ion-label style="display:contents;">PA Concentration: {{data.concentration2}}</ion-label>
+    </ion-item>
+  -->
+
+<br>
+  </ion-list>
+
+  
+
+</ion-content>

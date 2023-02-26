@@ -1,0 +1,60 @@
+@import 'src/app/tab1/tab1.page.scss';
+@import 'src/app/tab2/tab2.page.scss';
+@import 'src/app/tab3/tab3.page.scss';
+
+
+#pTitle{
+    @include pageTitle();
+}
+
+ion-content{
+    --ion-background-color: white;
+    background-color: white;
+}
+
+ion-header{
+    --ion-background-color:black;
+}
+
+ion-textarea {
+    border: 2px groove rgb(208, 196, 196);
+    border-radius: 3px;
+    height:100px;
+    width:100%;
+}
+
+ion-card {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    --color:$primaryC;
+    font-family: 'GT Super Text Web', Serif;
+    font-size: 18px;
+
+}
+
+.ratings img{
+    cursor:pointer;
+    transition:all 0.5s;
+    width:45px;
+}
+
+.ratings img:hover{
+   
+   transform: scale(1.3);
+    
+}
+
+#container {
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  ion-button{
+    --border-radius:0;
+    --background:$primaryC;
+    width:120px;
+}

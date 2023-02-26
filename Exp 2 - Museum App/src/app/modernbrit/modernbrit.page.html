@@ -1,0 +1,52 @@
+<ion-header>
+   <ion-toolbar>
+      <ion-row style="--margin-top:0;height:25px;">
+         <ion-col size="3" style="background-color:black">
+            <ion-button id="back" [routerLink]="['']">
+               <ion-icon name="arrow-back-outline" color="light"></ion-icon>
+
+            </ion-button>
+         </ion-col>
+
+         <ion-col>
+            <strong>Modern British</strong>
+         </ion-col>
+      </ion-row>
+   </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content id="first">
+
+   <li *ngFor="let i of [1,0,2]">
+
+
+      <ion-card [routerLink]="['/oldmaster']" id="detail1">
+         <hr>
+         <img src="{{art?.[i].image}}" (click)="toggleTag()">
+         <ion-card-title>{{art?.[i].name}}</ion-card-title>
+         <ion-card-subtitle>{{art?.[i].year}}</ion-card-subtitle>
+         <br>
+
+
+         <ion-card-content>
+            {{art?.[i].title}}
+
+            <ion-item (click)="toggleProv()">
+               <ion-label>
+                  Provenance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ion-icon
+                     name="add"></ion-icon>
+               </ion-label>
+            </ion-item>
+
+            <ion-card-content *ngIf="prov">{{art?.[i].provenance}}
+            </ion-card-content>
+
+         </ion-card-content>
+      </ion-card>
+
+   </li>
+
+
+</ion-content>

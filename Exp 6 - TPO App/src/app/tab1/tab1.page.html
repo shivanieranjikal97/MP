@@ -1,0 +1,69 @@
+<ion-content [fullscreen]="false" class="bg">
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-item style="color:white;font-size:19px;">
+          <ion-icon name="menu" color="light"></ion-icon>
+          &nbsp;&nbsp;Menu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-icon name="notifications" color="light"></ion-icon>
+          &nbsp;&nbsp;
+          <ion-avatar>
+            <img src="../assets/shivani.jpg" style="width:40px;height:40px;" />
+          </ion-avatar>
+        </ion-item>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+  <ion-img src="../assets/interview.jpg"></ion-img>
+
+  <ion-card class="cd">
+    <br>
+    <ion-label
+      style="color:rgb(109, 36, 36);font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight:bold;font-size: 15px;">
+      Training & Placement Office
+      <br>of<br>
+      Sardar Patel Institute of Technology
+    </ion-label>
+
+    <button [routerLink]="['/tabs/tab3']" style="margin-top:15px;">Update your Profile</button>
+    <br>&nbsp;
+
+
+    <a style="color:rgb(35, 35, 101);" (click)="setOpen(true)">
+      <marquee width="100%" scrollamount="3" direction="left" height="100px">
+        Click here for latest Placement statistics!
+      </marquee>
+    </a>
+  </ion-card>
+
+
+
+</ion-content>
+
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="font-size:18px;font-style: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Placement
+          Statistics</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: white;">
+
+
+      <ion-img src="../assets/placement.png" style="margin-top:-30px;height:500px;">
+
+      </ion-img>
+    </ion-content>
+  </ng-template>
+</ion-modal>

@@ -1,0 +1,250 @@
+@import '../tab1/tab1.page.scss';
+
+ion-header {
+    @include header();
+
+}
+
+.scrol {
+    @include scrollb();
+
+    background-color: $primaryC;
+}
+
+.bg1 {
+    @include topBg();
+}
+
+.cd {
+    @include bottomBg();
+
+    .em {
+        --ion-background-color: white;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin: auto;
+        border-radius: 15px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        margin-top: 15px;
+    }
+
+}
+
+.wrapper {
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+.wrapper .content {
+    padding: 65px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wrapper .outer {
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+
+}
+
+.outer .emojis {
+    height: 500%;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.outer li {
+    list-style: none;
+    height: 20%;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+#star-1:checked~.content .outer .slideImg {
+    margin-top: -120px;
+}
+
+#star-2:checked~.content .outer .slideImg {
+    margin-top: -240px;
+}
+
+#star-3:checked~.content .outer .slideImg {
+    margin-top: -360px;
+}
+
+#star-4:checked~.content .outer .slideImg {
+    margin-top: -480px;
+}
+
+#star-5:checked~.content .outer .slideImg {
+    margin-top: -600px;
+}
+
+.outer li img {
+    height: 100%;
+    width: 100%;
+}
+
+.content .stars {
+    margin-top: 20px;
+    margin-left: -27px;
+    width: 200px;
+}
+
+.stars label {
+    font-size: 30px;
+    color: #ccc;
+
+}
+
+#star-1:hover~.content .stars .star-1,
+#star-1:checked~.content .stars .star-1,
+
+#star-2:hover~.content .stars .star-1,
+#star-2:hover~.content .stars .star-2,
+#star-2:checked~.content .stars .star-1,
+#star-2:checked~.content .stars .star-2 {
+    color: orangered;
+}
+
+#star-3:hover~.content .stars .star-1,
+#star-3:hover~.content .stars .star-2,
+#star-3:hover~.content .stars .star-3,
+#star-3:checked~.content .stars .star-1,
+#star-3:checked~.content .stars .star-2,
+#star-3:checked~.content .stars .star-3,
+
+#star-4:hover~.content .stars .star-1,
+#star-4:hover~.content .stars .star-2,
+#star-4:hover~.content .stars .star-3,
+#star-4:hover~.content .stars .star-4,
+#star-4:checked~.content .stars .star-1,
+#star-4:checked~.content .stars .star-2,
+#star-4:checked~.content .stars .star-3,
+#star-4:checked~.content .stars .star-4 {
+    color: orange;
+}
+
+#star-5:hover~.content .stars .star-1,
+#star-5:hover~.content .stars .star-2,
+#star-5:hover~.content .stars .star-3,
+#star-5:hover~.content .stars .star-4,
+#star-5:hover~.content .stars .star-5,
+#star-5:checked~.content .stars .star-1,
+#star-5:checked~.content .stars .star-2,
+#star-5:checked~.content .stars .star-3,
+#star-5:checked~.content .stars .star-4,
+#star-5:checked~.content .stars .star-5 {
+    color: rgb(46, 170, 46);
+}
+
+.wrapper .footer {
+    height: 40px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    background: #f2f2f2;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer span {
+    font-size: 16px;
+    font-weight: 400;
+    color: $primaryC;
+    font-family: $myFont;
+}
+
+.footer .text::before {
+    content: "Rate your experience";
+}
+
+.footer .numb::before {
+    content: "0 out of 5";
+}
+
+#star-1:checked~.footer .text::before {
+    content: "I just hate it!";
+}
+
+#star-1:checked~.footer .numb::before {
+    content: "1 out of 5";
+}
+
+#star-2:checked~.footer .text::before {
+    content: "I dont like it!";
+}
+
+#star-2:checked~.footer .numb::before {
+    content: "2 out of 5";
+}
+
+#star-3:checked~.footer .text::before {
+    content: "It is just okay!";
+}
+
+#star-3:checked~.footer .numb::before {
+    content: "3 out of 5";
+}
+
+#star-4:checked~.footer .text::before {
+    content: "I like it!!";
+}
+
+#star-4:checked~.footer .numb::before {
+    content: "4 out of 5";
+}
+
+#star-5:checked~.footer .text::before {
+    content: "It's amazing!!!";
+}
+
+#star-5:checked~.footer .numb::before {
+    content: "5 out of 5";
+}
+
+ion-textarea {
+    width: 90%;
+    height: 60px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    color: $primaryC;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    font-family: $myFont;
+}
+
+ion-textarea[placeholder] {
+    color: $primaryC;
+    font-family: $myFont;
+}
+
+button {
+    margin-top: 20px;
+    width: 130px;
+    height: 40px;
+    margin-left: 15px;
+    background-color: $light;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 5px;
+
+}

@@ -1,0 +1,63 @@
+@import '../tab1/tab1.page.scss';
+
+
+ion-header {
+    @include header();
+
+}
+
+.scrol {
+    @include scrollb();
+
+    background-color: $primaryC;
+}
+
+.bg1{
+   @include topBg();
+}
+
+
+.cd {
+   @include bottomBg();
+
+
+    li {
+
+        list-style-type: none;
+        width: 90%;
+        margin: auto;
+        --border-radius: 10px;
+        border-radius: 10px;
+        padding-top: 10px;
+
+
+        ion-item {
+            margin-bottom: 20px;
+            --border-radius: 10px;
+            border-radius: 10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            --ion-background-color: white;
+            background-color:white;
+            font-style: $myFont;
+            color: $primaryC;
+            font-weight: 600;
+
+        
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+
+        }
+    }
+}
+
+
+.sm {
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 15px;
+}

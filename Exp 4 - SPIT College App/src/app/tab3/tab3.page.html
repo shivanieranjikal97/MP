@@ -1,0 +1,212 @@
+<ion-content [fullscreen]="false" class="scrol">
+
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-item style="color:white;font-size:19px;">
+          Menu
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-icon name="notifications" color="light" (click)="setOpent3(true)"></ion-icon>
+          &nbsp;&nbsp;
+          <ion-avatar>
+            <img src="../assets/shivani.jpg" style="width:40px;height:40px;" />
+          </ion-avatar>
+        </ion-item>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+  <ion-card class="bg1">
+    <ion-card class="ab">
+      <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+        <ion-slide *ngFor="let i of [0,1,2,3,4,5,6,7,8,9]">
+          <div class="a" (click)="display(i)">
+            {{dates?.[u].calDate?.[i].day}}
+            <div class="b">
+              {{dates?.[u].calDate?.[i].date}}
+            </div>
+            {{dates?.[u].calDate?.[i].month}}
+          </div>
+
+        </ion-slide>
+      </ion-slides>
+    </ion-card>
+  </ion-card>
+
+
+
+  <ion-card class="cd">
+    <h5 style="padding-left:20px;color:rgb(51, 15, 51);font-weight: bold;padding-top: 5px;">Calendar Events</h5>
+
+    <div class="show" *ngIf="showMe">
+      <li style="padding-top:10px;">
+
+        <ion-item>
+
+          <ion-col size="3">
+            <ion-avatar>
+              <img src="../assets/clipboard.png" />
+            </ion-avatar>
+          </ion-col>
+
+          <ion-col size="8">
+            <div class="name">
+              {{dates?.[u].calDate?.[j].name}}
+              <div class="name2">
+                {{dates?.[u].calDate?.[j].time}}
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col size="1">
+
+
+            <ion-fab-button color="danger" (click)="setOpenU(true,j,dates?.[u].calDate?.[j].name)"
+              *ngIf="arr1[0]===true" style="width:22px;height:22px;margin-left:-12px;">
+              <ion-icon name="cloud-upload" style="width:18px;height:18px;"></ion-icon>
+            </ion-fab-button>
+
+            <ion-fab-button color="success" (click)="presentToastDone('bottom')" *ngIf="arr1[0]===false"
+              style="width:22px;height:22px;margin-left:-12px;">
+              <ion-icon name="checkmark-sharp"></ion-icon>
+            </ion-fab-button>
+          </ion-col>
+
+        </ion-item>
+      </li>
+
+      <li>
+
+        <ion-item>
+
+          <ion-col size="3">
+            <ion-avatar>
+              <img src="../assets/clipboard.png" />
+            </ion-avatar>
+          </ion-col>
+
+          <ion-col size="8">
+            <div class="name">
+              {{dates?.[u].calDate?.[j].name1}}
+              <div class="name2">
+                {{dates?.[u].calDate?.[j].time1}}
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col size="1">
+
+
+            <ion-fab-button color="danger" (click)="setOpenU(true,j,dates?.[u].calDate?.[j].name1)"
+              *ngIf="arr1[1]===true" style="width:22px;height:22px;margin-left:-12px;">
+              <ion-icon name="cloud-upload" style="width:18px;height:18px;"></ion-icon>
+            </ion-fab-button>
+
+            <ion-fab-button color="success" (click)="presentToastDone('bottom')" *ngIf="arr1[1]===false"
+              style="width:22px;height:22px;margin-left:-12px;">
+              <ion-icon name="checkmark-sharp"></ion-icon>
+            </ion-fab-button>
+
+          </ion-col>
+
+        </ion-item>
+      </li>
+
+      <li>
+
+        <ion-item>
+
+          <ion-col size="3">
+            <ion-avatar>
+              <img src="../assets/clipboard.png" />
+            </ion-avatar>
+          </ion-col>
+
+          <ion-col size="8">
+            <div class="name">
+              {{dates?.[u].calDate?.[j].name2}}
+              <div class="name2">
+                {{dates?.[u].calDate?.[j].time2}}
+              </div>
+            </div>
+          </ion-col>
+
+          <ion-col size="1">
+
+            <ion-fab-button color="danger" (click)="setOpenU(true,j,dates?.[u].calDate?.[j].name2)"
+              *ngIf="arr1[2]===true" style="width:22px;height:22px;margin-left:-12px;">
+              <ion-icon name="cloud-upload" style="width:18px;height:18px;"></ion-icon>
+            </ion-fab-button>
+
+            <ion-fab-button color="success" (click)="presentToastDone('bottom')" *ngIf="arr1[2]===false"
+              style="width:22px;height:22px;margin-left:-12px;">
+              <ion-icon name="checkmark-sharp"></ion-icon>
+            </ion-fab-button>
+          </ion-col>
+
+        </ion-item>
+      </li>
+    </div>
+  </ion-card>
+
+</ion-content>
+
+<ion-modal [isOpen]="isModalOpenU"
+  style="height:165px;margin-top:425px;border-top-right-radius: 20px 20px;border-top-left-radius: 20px 20px;border-bottom-right-radius: 0px 0px;border-bottom-left-radius: 0px 0px;">
+  <ng-template>
+    <ion-header
+      style="border-top-right-radius: 20px 20px;border-top-left-radius: 20px 20px;border-bottom-right-radius: 0px 0px;border-bottom-left-radius: 0px 0px;">
+      <ion-toolbar>
+        <ion-title style="font-size:18px;">Upload Submission</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenU(false,10,'')" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: rgb(11, 11, 30)">
+
+      <ion-item style="padding-top:20px;--ion-background-color: rgb(11, 11, 30)">
+        <input type="file" style="border-radius:5px;height:35px;width:100%; color:white;font-size: 14px;">
+
+        <button
+          style="width:40px;height:30px;font-weight: 500;font-size: 16px;border-radius: 5px;background-color:white;margin-top: -8px;"
+          (click)="setOpenU(false,0,'')">
+          <ion-icon name="cloud-upload" (click)="mark()" (click)="presentToast('bottom')"
+            style="width:25px;height:25px;"></ion-icon>
+        </button>
+      </ion-item>
+
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<ion-modal [isOpen]="isModalOpent3">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title style="font-size:18px;">Notifications</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpent3(false)" style="color:white">
+            <ion-icon name="close-circle-outline" color="light" style="width:30px;height:30px;"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="scrol" style="background-color: white;">
+
+      <iframe src="http://mca.spit.ac.in/index.php" id="iframe-id" scrolling="no"></iframe>
+
+      <ion-img src="../assets/notify.jpg" style="margin-top:280px;height:230px;">
+
+      </ion-img>
+    </ion-content>
+  </ng-template>
+</ion-modal>

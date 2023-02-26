@@ -1,0 +1,59 @@
+@import '../tab1/tab1.page.scss';
+
+ion-header {
+  @include header();
+
+}
+
+.scrol {
+  @include scrollb();
+
+  background-color: $primaryC;
+}
+
+.cd {
+  top: 85px;
+  height: 600px;
+  --ion-background-color: $greyBg;
+  background-color: $greyBg;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top-right-radius: 20px 20px;
+  border-top-left-radius: 20px 20px;
+  border-bottom-right-radius: 0px 0px;
+  border-bottom-left-radius: 0px 0px;
+  font-family: $myFont;
+  color: white;
+  --color: white;
+
+}
+
+.lab {
+  --ion-background-color: $greyBg;
+  background-color: $greyBg;
+  color: $primaryC;
+  --color: $primaryC;
+  font-weight: 600;
+  font-family: $myFont;
+}
+
+ion-slide {
+  width: 280px;
+  height: 180px;
+  background-color: white;
+
+  margin-left: 0px;
+
+  img {
+    margin-top: 10px;
+    width: 270px;
+    height: 160px;
+    border-radius: 10px;
+
+  }
+
+  ion-label {
+    font-size: 18px;
+    color: blue;
+  }
+}

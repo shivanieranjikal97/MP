@@ -1,0 +1,104 @@
+@import '../tab1/tab1.page.scss';
+
+@mixin header {
+    --ion-background-color: $primaryC;
+    background-color: $primaryC;
+
+    ion-title {
+        color: white;
+
+    }
+}
+
+@mixin scrollb {
+    --offset-bottom: auto !important;
+    --overflow: hidden;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin bottomBg() {
+    top: 2px;
+    height: 600px;
+    --ion-background-color: white;
+    background-color: white;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-top-right-radius: 30px 30px;
+    border-top-left-radius: 30px 30px;
+    border-bottom-right-radius: 0px 0px;
+    border-bottom-left-radius: 0px 0px;
+    font-family: $myFont;
+}
+
+ion-header {
+    @include header();
+
+}
+
+ion-content {
+    @include scrollb();
+
+    --background: $primaryC;
+    background-color: $primaryC;
+}
+
+.cd1 {
+
+    @include bottomBg();
+
+    ul {
+
+        li {
+
+            --ion-background-color: yellow;
+            background-color: yellow;
+            list-style-type: none;
+            width: 220px;
+            margin: auto;
+            --border-radius: 10px;
+            border-radius: 10px;
+            margin-left: -20px;
+            margin-bottom: 20px;
+            padding: -10px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            height: 140px;
+
+
+        }
+    }
+}
+
+ion-img {
+    width: 35px;
+    height: 35px;
+}
+
+.opt:hover {
+    background-color: rgb(233, 220, 220);
+}
+
+.opt {
+
+    border-radius: 5px;
+    background-color: #FFCCE1;
+}
+
+.lead {
+    --ion-background-color: #E0D7FF;
+    background-color: #E0D7FF;
+
+
+}
+
+.in {
+    font-family: $myFont;
+    color: rgb(210, 15, 47);
+    --color: rgb(210, 15, 47);
+    font-weight: bold;
+}
